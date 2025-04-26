@@ -1,0 +1,61 @@
+{
+  "window": {
+    "width": 1920,
+    "height": 1080,
+    "title": "Tiled Web Pages"
+  },
+  "tiles": [
+    {
+      "url": "https://www.google.com",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 540
+      },
+      "offset": {
+        "x": 0,
+        "y": 100
+      }
+    },
+    {
+      "url": "https://www.github.com",
+      "position": {
+        "x": 960,
+        "y": 0,
+        "width": 960,
+        "height": 540
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "url": "https://www.wikipedia.org",
+      "position": {
+        "x": 0,
+        "y": 540,
+        "width": 960,
+        "height": 540
+      },
+      "offset": {
+        "x": 0,
+        "y": 200
+      }
+    },
+    {
+      "url": "https://www.youtube.com",
+      "position": {
+        "x": 960,
+        "y": 540,
+        "width": 960,
+        "height": 540
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}
