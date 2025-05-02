@@ -3,8 +3,9 @@ const path = require('path');
 
 class ConfigLoader {
   constructor(configPath) {
-    this.configPath = configPath || path.join(process.cwd(), 'config.json');
+    this.configPath = configPath;
     this.config = null;
+    console.log('ConfigLoader initialized with path:', this.configPath);
   }
 
   loadConfig() {
