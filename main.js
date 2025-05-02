@@ -51,6 +51,11 @@ function initializeApp(reload = false) {
   if (!windowManager || !windowManager.getWindow()) {
     windowManager = new WindowManager(config);
     const mainWindow = windowManager.createWindow();
+    
+    mainWindow.on('closed', () => {
+      app.quit();
+    });
+    
     createMenu(mainWindow);
   } else if (reload) {
     windowManager.getWindow().setTitle(config.window.title || 'Tiled Web Pages');
@@ -126,9 +131,7 @@ app.whenReady().then(() => {
 });
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  app.quit();
 });
 
 app.on('activate', () => {
