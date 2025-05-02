@@ -23,6 +23,10 @@ function initializeApp() {
   windowManager = new WindowManager(config);
   const mainWindow = windowManager.createWindow();
   
+  mainWindow.on('closed', () => {
+    app.quit();
+  });
+  
   tileManager = new TileManager(mainWindow, config);
   tileManager.createTiles();
   
@@ -35,9 +39,7 @@ function initializeApp() {
 app.whenReady().then(initializeApp);
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  app.quit();
 });
 
 app.on('activate', () => {
